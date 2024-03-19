@@ -1,0 +1,12 @@
+steps:
+  - name: Start Gotty Servive
+    command: gotty -p 8090 -w --credential blackdagger:blackdagger /bin/bash
+handlerOn:
+  success:
+    command: echo "Gotty server has been started"
+  failure:
+    command: "echo failed"
+  cancel:
+    command: "pkill gotty"
+  exit:
+    command: "echo finished && pkill gotty"
