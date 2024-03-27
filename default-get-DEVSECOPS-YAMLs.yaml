@@ -1,5 +1,8 @@
+tags: blackdagger, pull, devsecops
 steps:
   - name: get-DEVSECOPS-YAMLS
+    description: |
+      Retrieves DevSecOps-related YAML configurations or files using the 'blackdagger pull devsecops' command. This step is crucial for setting up or updating the system's or application's security and development operations according to the latest DevSecOps practices.
     command: bash
     script: |
       blackdagger pull devsecops

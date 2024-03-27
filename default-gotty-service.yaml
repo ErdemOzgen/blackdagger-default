@@ -1,12 +1,23 @@
+tags: gotty, service, web-terminal
 steps:
-  - name: Start Gotty Servive
+  - name: Start Gotty Service
+    description: |
+      Starts a Gotty server instance on port 8090, providing web-based terminal access. The server is launched with write access enabled and secured with credentials. This step makes terminal access available through a web interface, using Gotty to expose /bin/bash over HTTP with authentication.
     command: gotty -p 8090 -w --credential blackdagger:blackdagger /bin/bash
 handlerOn:
   success:
+    description: |
+      Outputs a confirmation message when the Gotty server starts successfully.
     command: echo "Gotty server has been started"
   failure:
+    description: |
+      Outputs an error message if the Gotty server fails to start.
     command: "echo failed"
   cancel:
+    description: |
+      Kills the Gotty process if the server setup is canceled.
     command: "pkill gotty"
   exit:
+    description: |
+      Outputs a finished message and kills the Gotty process upon exit.
     command: "echo finished && pkill gotty"

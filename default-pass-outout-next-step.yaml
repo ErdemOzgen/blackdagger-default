@@ -1,8 +1,13 @@
+tags: bash, echo, variables
 steps:
   - name: pass 'hello'
+    description: |
+      Executes an echo command to output the string 'hello'. The output of this command is captured in a variable named OUT1 for use in subsequent steps.
     command: echo hello
     output: OUT1
   - name: output 'hello world'
+    description: |
+      Utilizes bash to concatenate the previously stored 'hello' string with 'world', effectively creating the output 'hello world'. This demonstrates how to pass output between steps in a sequence, relying on the completion of the 'pass \'hello\'' step.
     command: bash
     script: |
       echo $OUT1 world

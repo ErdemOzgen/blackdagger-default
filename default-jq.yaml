@@ -1,5 +1,8 @@
+tags: jq, query, json
 steps:
   - name: run query
+    description: |
+      Executes a jq query on a provided JSON input to extract specific data. The script processes a JSON object, mapping the value of 'b' within the nested object keyed by '10' to a new object keyed by the 'id' value. This demonstrates how to use jq to transform and query JSON data efficiently.
     executor: jq
     command: '{(.id): .["10"].b}'
     script: |

@@ -1,5 +1,8 @@
+tags: blackdagger, pull, configuration
 steps:
   - name: get-CART-YAMLS
+    description: |
+      This step executes the 'blackdagger pull default' command using bash. It is designed to retrieve the default configuration or set of YAML files from the 'blackdagger' tool or repository. This action is critical for ensuring that the system or application has the necessary default settings or data for operation.
     command: bash
     script: |
       blackdagger pull default

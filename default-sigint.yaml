@@ -1,5 +1,8 @@
+tags: bash, trap, signals
 steps:
   - name: step1
+    description: |
+      Runs a bash script that sets up trap commands for signals 1 through 64, each designed to output a message when the respective signal is caught. The script then sleeps for 60 seconds, during which it can react to these signals. If the step is stopped, it sends a "SIGINT" to cleanly interrupt the sleep command, demonstrating signal handling in bash scripts.
     command: bash
     script: |
       for s in {1..64}; do trap "echo trap $s" $s; done

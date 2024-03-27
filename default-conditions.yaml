@@ -1,8 +1,14 @@
+# YOU DONT NEED TO KEEP DESCRIPTIONS
+tags: workflow, dependencies, preconditions, echo
 params: foo
 steps:
   - name: step1
+    description: |
+      Initiates the workflow by echoing 'start'. This serves as a preliminary step for other actions that depend on its completion.
     command: echo start
   - name: foo
+    description: |
+      Echoes 'foo' contingent on the 'step1' completion and the condition that the first argument ('$1') is 'foo'. This step demonstrates conditional execution based on argument values.
     command: echo foo
     depends:
       - step1
@@ -10,6 +16,8 @@ steps:
       - condition: "$1"
         expected: foo
   - name: bar
+    description: |
+      Similar to the 'foo' step, this echoes 'bar' provided 'step1' has completed and the first argument ('$1') is 'bar'. It's another instance of executing actions based on specified conditions.
     command: echo bar
     depends:
       - step1
@@ -17,6 +25,8 @@ steps:
       - condition: "$1"
         expected: bar
   - name: bar2
+    description: |
+      This step echoes 'bar' again but depends solely on the completion of the 'bar' step. It shows how actions can be sequentially chained through dependencies.
     command: echo bar
     depends:
       - bar
