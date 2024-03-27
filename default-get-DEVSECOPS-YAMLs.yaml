@@ -1,0 +1,5 @@
+steps:
+  - name: get-DEVSECOPS-YAMLS
+    command: bash
+    script: |
+      blackdagger pull devsecops

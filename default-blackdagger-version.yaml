@@ -1,0 +1,5 @@
+steps:
+  - name: get-CART-YAMLS
+    command: bash
+    script: |
+      blackdagger pull default
