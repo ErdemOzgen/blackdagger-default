@@ -1,8 +1,7 @@
+description: This step executes the 'blackdagger pull default' command using bash to retrieve the default configuration or set of YAML files from the 'blackdagger' tool or repository.
 tags: blackdagger, pull, default
 steps:
   - name: get-DEFAULT-YAMLS
-    description: |
-      Pulls the default YAML configurations or files using the 'blackdagger pull default' command. This ensures the system or application is set up with the standard configurations necessary for basic operations.
     command: bash
     script: |
       blackdagger pull default

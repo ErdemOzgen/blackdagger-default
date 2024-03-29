@@ -1,8 +1,8 @@
+description: This step executes the 'blackdagger pull cart' using bash to retrieve the latest CART settings or data essential for the system's or application's CART functionality.
+
 tags: blackdagger, pull, cart
 steps:
   - name: get-CART-YAMLS
-    description: |
-      Retrieves the cart-related YAML configurations or files using the 'blackdagger pull cart' command. This action fetches the latest cart settings or data essential for the system's or application's cart functionality.
     command: bash
     script: |
       blackdagger pull cart

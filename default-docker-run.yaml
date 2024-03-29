@@ -1,8 +1,7 @@
+description: "This step utilizes a Docker container to execute a simple Deno script, showcasing the \"Hello World\" example from Deno's official examples repository."
 tags: deno, docker, hello-world, automation
 steps:
   - name: deno_hello_world
-    description: |
-      This step utilizes a Docker container to execute a simple Deno script, showcasing the "Hello World" example from Deno's official examples repository. By specifying the 'denoland/deno:1.10.3' image, it ensures that the script runs in a controlled and consistent Deno environment. The 'autoRemove: true' setting under 'host' indicates that the Docker container will be automatically removed after the script execution, keeping the system environment clean and tidy. This step is a practical demonstration of using Docker and Deno together for running lightweight and secure JavaScript/TypeScript applications.
     executor:
       type: docker
       config:

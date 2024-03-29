@@ -1,7 +1,6 @@
+description: Executes the echo command to write the string 'hello' into a file located at '/tmp/hello.txt' to demonstrate how to redirect standard output to a filee to create or overwrite.
 tags: echo, file-output
 steps:
   - name: write hello to '/tmp/hello.txt'
-    description: |
-      Executes the echo command to write the string 'hello' into a file located at '/tmp/hello.txt'. This step demonstrates how to redirect standard output to a file, effectively creating or overwriting '/tmp/hello.txt' with the content 'hello'.
     command: echo hello
     stdout: /tmp/hello.txt
