@@ -1,8 +1,7 @@
+description: This YAML retrieves fake JSON data from the 'https://jsonplaceholder.typicode.com/comments' endpoint using a GET request, demonstrating how to interact with HTTP APIs to retrieve data.
 tags: http, json, fake-data
 steps:
   - name: get fake json data
-    description: |
-      Retrieves fake JSON data from the 'https://jsonplaceholder.typicode.com/comments' endpoint using a GET request. This step is configured to fetch comments associated with a specific postId, demonstrating how to interact with HTTP APIs to retrieve data. The request is configured with a timeout of 10 seconds and is set to operate silently, suppressing verbose output.
     executor:
       type: http
       config: 
