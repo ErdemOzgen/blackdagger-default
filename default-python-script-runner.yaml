@@ -1,0 +1,31 @@
+steps:
+  - name: Python-script-runner
+    command: python3
+    script: |
+      print("hello")
+      for i in range(100):
+        print(i)
+      import os
+
+      # Get the name of the operating system
+      os_name = os.name
+
+      # Detailed platform information
+      platform_info = os.uname()
+
+      # Environment variables (as an example)
+      environment_variables = os.environ
+
+      # Current working directory
+      current_working_directory = os.getcwd()
+
+      # User's home directory
+      home_directory = os.path.expanduser('~')
+
+      print({
+          "Operating System Name": os_name,
+          "Platform Information": platform_info,
+          "Environment Variables (example)": {key: environment_variables[key] for key in list(environment_variables)[:5]},  # Show a few examples
+          "Current Working Directory": current_working_directory,
+          "User's Home Directory": home_directory
+      })
