@@ -1,7 +1,7 @@
-description: This step executes the 'blackdagger pull default' command using bash to retrieve the default configuration or set of YAML files from the 'blackdagger' tool or repository.
+description: This step executes the 'blackdagger version' gives version
 tags: blackdagger, pull, configuration
 steps:
   - name: get-CART-YAMLS
     command: bash
     script: |
-      blackdagger pull default
+      blackdagger version
