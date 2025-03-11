@@ -8,4 +8,4 @@ steps:
         image: "denoland/deno:1.10.3"
         host:
           autoRemove: true
-    command: run https://examples.deno.land/hello-world.ts
+    command: deno run https://docs.deno.com/examples/scripts/hello_world.ts
