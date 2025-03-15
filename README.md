@@ -1,3 +1,9 @@
+<p align="center">
+  <img src="./assets/images/yamls.png" width="300" alt="yamls-logo">
+  <img src="./assets/images/blackdagger.png" width="300" alt="blackdagger-logo">
+</p>
+
+
 # Blackdagger Default YAML Files
 This repository consists of YAML files that are created to be used in [Blackdagger](https://github.com/ErdemOzgen/blackdagger) tool.
 These YAML files are designed to perform basic and simple tasks and show you the basic format and mechanisms of Blackdagger YAML files. You can find the descriptions of each step in the YAML files.
